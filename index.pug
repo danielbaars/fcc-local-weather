@@ -1,0 +1,20 @@
+extends _default
+
+block head
+	- var pageTitle = 'FCC Show The Local Weather'
+	- var metaDescription = "A web page that shows the local weather built as part of Free Code Camp's 'Intermediate Front End Development Projects', using Pug, SCSS and Bootstrap 4."	
+	- var companyName = 'Free Code Camp'
+	- var bodyClass = 'local-weather'
+
+block content
+	.weather__outer
+		.weather.container
+			.weather__header Your Local Weather
+			.weather__city Your City
+			.weather__temperature
+				span.weather__temperature--celsius Your Temperature
+				span.weather__temperature--fahrenheit.hide Your Temperature
+				span.weather__icon
+			.weather__units 
+				span.weather__units--celsius Give me the temperature in Fahrenheit, please!
+				span.weather__units--fahrenheit.hide Give me the temperature in Celsius, please!
