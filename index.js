@@ -2,7 +2,7 @@ var latitude, longitude;
 
 $(document).ready(function(){
 
-	$.getJSON('http://freegeoip.net/json/', function(data) {
+	$.getJSON('https://freegeoip.net/json/', function(data) {
 
 		latitude = data.latitude;
 		longitude = data.longitude;
@@ -18,7 +18,7 @@ function onPositionReady() {
 
 	function showPos() {
 
-		$.getJSON('http://api.openweathermap.org/data/2.5/weather?lat=' + latitude + '&lon=' + longitude + '&appid=b963fa5ee1b5df1a5e5b13e30bb9da05', function(data) {
+		$.getJSON('https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?lat=' + latitude + '&lon=' + longitude + '&appid=b963fa5ee1b5df1a5e5b13e30bb9da05', function(data) {
 
 			var name = data.name;
 			var country = data.sys.country;
