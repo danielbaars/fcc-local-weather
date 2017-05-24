@@ -26,7 +26,7 @@ function onPositionReady() {
 			var tempF = Math.floor((( data.main.temp - 273.15) * 9/5) + 32);
 			var icon = data.weather[0].icon;
 
-			var html = name + ', ' + country + ' --- ' + tempC + '&#8451;, ' + tempF + '&#8457; <img src="http://openweathermap.org/img/w/' + icon + '.png">';
+			var html = name + ', ' + country + ' --- ' + tempC + '&#8451;, ' + tempF + '&#8457; <img src="https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/w/' + icon + '.png">';
 
 			$(".weather__city").text(name);
 			$(".weather__temperature--celsius").html(tempC + ' &#8451;');
